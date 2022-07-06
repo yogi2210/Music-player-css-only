@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    background-color: hsl(231deg 53% 10%);
+
+}
+
+.container {
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+    background-color: hsl(231deg 53% 10%);
+}
+h3{
+    font-size: 22px;
+    padding: 5px 0 5px 0;
+}
+.color-white {
+    color: rgb(247, 248, 248);
+}
+
+.color-grey {
+    color: rgb(202 188 188);
+}
+
+.bg-transparent {
+    background: transparent;
+}
+/* nav bar */
+
+
+.nav-bar{
+    display: grid;
+    height: 100px;
+    align-items: center;
+    grid-template-columns: 100px 100px auto 346px 50px 80px;
+    color: rgb(247, 248, 248);
+    grid-gap: 2px;
+    background: transparent;
+    padding-top: 10px;
+    
+}
+.logo{
+    overflow: hidden;
+}
+.logo img{
+    height:75px;
+    width: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.name{
+    font-size: 25px;
+    padding-left: 5px;
+    overflow: hidden;
+}
+.name #last-name{
+    font-weight: bold;
+}
+.favourite{
+    padding-left: 83px;
+    font-size: 20px;
+}
+.favourite a{
+    text-decoration: none;
+    color: white;
+}
+.favourite a:hover{
+    color: rgb(140, 136, 136);
+    border-bottom : 2px solid rgb(140, 136, 136);
+}
+
+.search-box-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: hsl(230deg 55% 16%);
+    border-radius: 18px;
+    padding: 0 10px;
+    
+}
+.search-box-content i:hover{
+    color: rgb(140, 136, 136);
+}
+.search-box input{
+    width: 100%;
+    height: 43px;
+    font-size: 20px;
+    background:transparent;
+    border: none;
+    outline: none;
+    
+    color: white;
+    padding-left: 15px;
+}
+.bell-icon{
+    display: flex;
+    justify-content: center;
+}
+.bell-icon i:hover{
+    color: rgb(140, 136, 136);
+}
+ .profile-image img{
+    
+    width:70%;
+    border-radius: 50%;
+}
+.profile-image img:hover{
+    border : 2px solid rgb(140, 136, 136);
+    
+}
+
+
+/* main container */
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: auto;
+    width: 100%;
+    /* border: 2px solid white; */
+    justify-content: center;
+}
+
+.main-container>.main {
+    height: auto;
+    /* width: 68%; */
+    /* border: 2px solid white; */
+}
+
+.main-container>.sidebar {
+    height: auto;
+    /* border: 2px solid white; */
+    margin-left: 13px;
+    padding-left: 7px;
+    border-left: 2px solid #674072;
+}
+
+/*Artisit info card.*/
+.bg-blue{
+    background-color: #121a3f;
+}
+
+.artist-info-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-bottom: 50px;
+}
+.artist-image-container{
+    /* height: 53vh; */
+    /* width: 42vw; */
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    background-image: url("./images/beatles2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.artist-info-container{
+    /* height: 53vh; */
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    
+}
+.band-name-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px 11px;
+}
+.description p{
+    text-align: justify;
+    padding: 0px 11px;
+    line-height: 16px;
+}
+.follow-container{
+    display: flex;
+    flex-direction: row;
+    padding: 25px 11px;
+}
+.play-button{
+    font-size: 20px;
+    padding: 2px 49px;
+    background-color: #560179;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+.follow-link{
+    padding-left: 54px;
+    font-size: 21px;
+}
+
+.follow-link a{
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.follow-link a:hover{
+    color: gray;
+}
+
+/* Artist Songs */
+.artist-songs-container{
+    width: 100%;
+    
+    /* border: 2px solid rgb(181, 31, 31); */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.queue-card{
+    display: grid;
+    grid-template-columns: 1fr 2fr 23fr 3fr;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #dbc6c6;
+    border-radius: 20px;
+}
+.queue-card div{
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 13px;
+}
+
+
+.queue-card-img img{
+    height: 60px;
+    width: 60px;
+}
+.heart{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center;
+}
+.heart a i{
+    font-size: 16px;
+}
+.heart a i:hover{
+    color: red;
+}
+
+/* side bar */
+    /* header class deals with the header of both similar artist and recently played */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* similar artists */
+.similar-artist-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.similar-artist-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.song-info {
+    height: 100px;
+    /* border : 2px solid white; */
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    overflow: hidden;
+}
+.song-image{
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+}
+.resize-song-image {
+    height: 95px;
+    width: 90px;
+    border-radius: 15px;
+    
+}
+.song-image:hover{
+    transform: scale(1.2);
+}
+
+.song-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.song-name p {
+    margin-bottom: 6px;
+}
+
+.add-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 20px;
+}
+
+.add-info p {
+    margin-bottom: 6px;
+}
+.add-info a{
+    text-decoration: none;
+}
+.three-dots{
+    font-weight: bolder;
+    color: white;
+    
+}
+
+.recently-card{
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr;
+    margin-bottom: 8px;
+}
+.recently-card div{
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.recently-img img{
+    height: 60px;
+    width: 60px;
+}
+.heart a i:hover{
+    color: red;
+}
+
+/* media quaries */
+
+@media screen and (max-width : 992px) {
+    .nav-bar{
+        grid-template-columns: 0px 0px 0px auto 50px 80px;
+        
+    }
+    .main-container{
+        width: 100%;
+    }
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+}

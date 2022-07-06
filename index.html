@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAV BAR -->
+        <section class="nav-bar">
+            <div class="logo">
+                <img src="./images/logo3.jpg" alt="Logo" class="logo-img">
+            </div>
+            <div class="name">
+                <p id="first-name">Ninja</p>
+                <p id="last-name">Studios</p>
+            </div>
+            <div class="favourite">
+                <a href="#">Favourites</a>
+            </div>
+            <div class="search-box">
+                <div class="search-box-content">
+                    <i class="fa-solid fa-magnifying-glass magnifying-glass"></i>
+                    <input type="text " placeholder="search">
+                    <i class="fa-solid fa-microphone microphone"></i>
+                </div>
+            </div>
+            <div class="bell-icon"><i class="fa-solid fa-bell fa-1.5x"></i></div>
+            <div class="profile-image-container">
+                <div class="profile-image">
+                    <img src="./images/yogi.jpg" alt="image">
+                </div>
+            </div>
+        </section>
+        <!-- main container : conatining main section and aside bar for quese -->
+        <div class="main-container">
+            <div class="main">
+                <!-- New Releases -->
+                <section class="new-releases">
+                    <div>
+                        <img class="cover-images" src="./images/cover1.jpg" alt="cover1">
+                    </div>
+                    <div>
+                        <img class="cover-images" src="./images/cover2.jpg" alt="cover2">
+                    </div>
+                    <div>
+                        <img class="cover-images" src="./images/cover3.jpg" alt="cover3">
+                    </div>
+                </section>
+                <!-- Latest Releases -->
+                <section class="latest-releases">
+                    <h3 class="color-white">Latest Release</h3>
+                    <div class="latest-songs">
+                        <div class="song-info">
+                            <div class="song-image">
+                                <a href="#now-playing"> <img class="resize-song-image" src="./images/song-image.jpg"
+                                        alt=""></a>
+                            </div>
+                           
+                            <div class="song-name">
+                                <p class="color-white">Valentine</p>
+                                <p class="color-grey"> 19-04-2022</p>
+                            </div>
+                            <div class="add-info">
+                                <a href="#add-info-lightbox"><p class="three-dots">...</p></a> 
+                                <p class="color-grey">4:44</p>
+                            </div>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-image">
+                                <a href="#now-playing"> <img class="resize-song-image" src="./images/song-image2.jpg"
+                                    alt=""></a>
+                            </div>
+                            <div class="song-name">
+                                <p class="color-white">Oscar</p>
+                                <p class="color-grey"> 23-04-2022</p>
+                            </div>
+                            <div class="add-info">
+                                <a href="#add-info-lightbox"><p class="three-dots">...</p></a> 
+                                <p class="color-grey">4:44</p>
+                            </div>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-image">
+                                <a class="color-white" href="#now-playing"> <img class="resize-song-image" src="./images/song-image3.jpg"
+                                    alt=""></a>
+                            </div>
+                            <div class="song-name">
+                                <p class="color-white">Picka</p>
+                                <p class="color-grey"> 15-04-2022</p>
+                            </div>
+                            <div class="add-info">
+                                <a href="#add-info-lightbox"><p class="three-dots">...</p></a> 
+                                <p class="color-grey">4:44</p>
+                            </div>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-image">
+                                <a href="#now-playing"> <img class="resize-song-image" src="./images/song-image.jpg"
+                                    alt=""></a>
+                            </div>
+                            <div class="song-name">
+                                <p class="color-white">Water</p>
+                                <p class="color-grey"> 12-04-2022</p>
+                            </div>
+                            <div class="add-info">
+                               <a href="#add-info-lightbox"><p class="three-dots">...</p></a> 
+                                <p class="color-grey">4:44</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- additional info lightbox in latest releases section. It shows up when ... is clicked -->
+
+                    <div id="add-info-lightbox">
+                        <div class="add-info-container">
+                            <div class="color-white" >Play Now   </div>
+                            <div class="color-white" >Add To Queue</div>
+                            <div class="color-white" >Add To Favourites</div>
+                            <div  ><a class="close" href="#"><h3 class="color-white" >X</h3></a></div>
+                        </div>
+                    </div>
+
+                     <!-- bottom music playing bar -->
+                     <div id="now-playing" class="color-white">
+                        <div class="left-cell bg-transparent">
+                            <div class="left-cell-img">
+                                <img class="left-cell-img-resize" src="./images/honey.jpg" alt="">
+
+                            </div>
+                            <div class="left-cell-info bg-transparent">
+                                <p class="color-white bg-transparent">Hogi Meri Jeet</p>
+                                <p class="color-grey bg-transparent">Honey Singh</p>
+                            </div>
+                            <div class="left-cell-like bg-transparent">
+                                <i class="fa-solid fa-heart bg-transparent"></i>
+                                <!-- <i class="fa-solid fa-album-collection bg-transparent"></i> -->
+                                <i class="fa-solid fa-ban bg-transparent"></i>
+                            </div>
+
+                        </div>
+                        <div class="middle-cell bg-transparent">
+                           <audio class="bg-transparent" src="./music/Hogi-Meri-Jeet.mp3" controls></audio>
+
+                        </div>
+                        <div class="right-cell bg-transparent">
+                            
+                            <i class=" bg-transparent fa-solid fa-backward-step"></i>
+                            <i class=" bg-transparent fa-solid fa-pause"></i>
+                            <i class=" bg-transparent fa-solid fa-forward-step"></i>
+                            
+                            <div id="close" class="bg-transparent">
+                                <a class="bg-transparent color-white" href="#">X</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <!-- Popular Artists -->
+                <!-- In this section if we click on images we will be directed to popular artists page.
+                once there we can come back to our home page using Back To Home link in navigation bar -->
+                
+                <section class="popular-artists-corousal">
+                    <h3 class="color-white">Popular Artists</h3>
+                    <div class="popular-artists">
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/singer-img1.jpg" alt=""></a>
+                            <p class="color-white bold">Arina Grande</p>
+                        </div>
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/latest-english2.jpg" alt=""></a>
+                            <p class="color-white bold">Justin Biber</p>
+                        </div>
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/singer-img3.jpg" alt=""></a>
+                            <p class="color-white bold">Mister</p>
+                        </div>
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/singer-img4.jpg" alt=""></a>
+                            <p class="color-white bold">Arjit Singh</p>
+                        </div>
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/singer-img5.jpg" alt=""></a>
+                            <p class="color-white bold">Diljit Dosanjh</p>
+                        </div>
+                        <div class="popular-artist-card">
+                            <a href="popular_artist.html"> <img src="./images/singer-img6.jpg" alt=""></a>
+                            <p class="color-white bold">Badshah</p>
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+                <!-- Music Station -->
+
+                <section class="music-station">
+                    <h3 class="color-white">Popular Music Stations </h3>
+                    <div class="station-container">
+                        <div class="station">
+                            <p class="color-white">Love</p>
+                            <img src="./images/station-img1.jpg" alt="">
+                        </div>
+                        <div class="station">
+                            <p class="color-white">Retro</p>
+                            <img src="./images/station-img2.jpg" alt="">
+                        </div>
+                        <div class="station">
+                            <p class="color-white">Chill</p>
+                            <img src="./images/station-img3.jpg" alt="">
+                        </div>
+                        <div class="station">
+                            <p class="color-white">Workout</p>
+                            <img src="./images/station-img4.jpg" alt="">
+                        </div>
+                        <div class="station">
+                            <p class="color-white">Rock</p>
+                            <img src="./images/station-img5.jpg" alt="">
+                        </div>
+                        <div class="station">
+                            <p class="color-white">Pop</p>
+                            <img src="./images/station-img6.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- Occasion -->
+                <section class="occasion">
+                    <div class="occasion-card">
+                        <p class="color-white">Party</p>
+                        <img src="./images/party-img.jpg" alt="">
+                    </div>
+                    <div class="occasion-card">
+                        <p class="color-white">Electronic</p>
+                        <img src="./images/electronic-img.jpg" alt="">
+                    </div>
+                    <div class="occasion-card">
+                        <p class="color-white">Road Trip</p>
+                        <img src="./images/road-trip.jpg" alt="">
+                    </div>
+                </section>
+                <!-- Latest English -->
+                <section class="latest">
+                    <h3 class="color-white">Latest English</h3>
+                    <div class="latest-card-container">
+                        <div class="latest-card">
+                            <img src="./images/latest-english1.jpg" alt="">
+                            <p class="color-white">Without Me</p>
+                            <p class="color-grey"> Mar 15, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-english2.jpg" alt="">
+                            <p class="color-white">History</p>
+                            <p class="color-grey"> Mar 22, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-english3.jpg" alt="">
+                            <p class="color-white">7 Fates</p>
+                            <p class="color-grey"> April 1, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-english4.jpg" alt="">
+                            <p class="color-white">Wisper</p>
+                            <p class="color-grey"> April 7, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-english5.jpg" alt="">
+                            <p class="color-white">Baby</p>
+                            <p class="color-grey"> April 15, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-english6.jpg" alt="">
+                            <p class="color-white">San Diago</p>
+                            <p class="color-grey"> April 23, 2022</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Latest Hindi -->
+                <section class="latest">
+                    <h3 class="color-white">Latest Hindi</h3>
+                    <div class="latest-card-container">
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi1.jpg" alt="">
+                            <p class="color-white">Without Me</p>
+                            <p class="color-grey"> Mar 15, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi2.jpg" alt="">
+                            <p class="color-white">History</p>
+                            <p class="color-grey"> Mar 22, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi3.jpg" alt="">
+                            <p class="color-white">7 Fates</p>
+                            <p class="color-grey"> April 1, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi4.jpg" alt="">
+                            <p class="color-white">Wisper</p>
+                            <p class="color-grey"> April 7, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi5.jpg" alt="">
+                            <p class="color-white">Baby</p>
+                            <p class="color-grey"> April 15, 2022</p>
+                        </div>
+                        <div class="latest-card">
+                            <img src="./images/latest-hindi6.jpg" alt="">
+                            <p class="color-white">San Diago</p>
+                            <p class="color-grey"> April 23, 2022</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Sidebar Containing Queue -->
+            <aside class="queue-section">
+
+                <a href="#queue-lightbox">
+                    <h3 id="queue" class="queue-heading color-white">Queue </i></h3>
+                </a>
+                <!-- queue Lightbox -->
+                    <div id="queue-lightbox">
+                        <a class="bg-transparent" href="#">X</a>
+                        <p class="bg-transparent">Playlists</p>
+                        <p class="bg-transparent">Favourite Songs</p>
+                    </div>    
+
+                <div class="queue-card-container">
+                    <div class="queue-card">
+                        <div class=" color-white song-number">01</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Quasi</p>
+                            <p class="color-grey">Hemisphere</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number"><p>02</p>
+                        </div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Snap</p>
+                            <p class="color-grey">Miranda</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">03</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">7 Fates</p>
+                            <p class="color-grey">BTS</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">04</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english4.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Adele 21</p>
+                            <p class="color-grey">Adele</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">05</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english5.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Boyfriend</p>
+                            <p class="color-grey">Justin Biber</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">06</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english6.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Florida</p>
+                            <p class="color-grey">Ed Shreen</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">07</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-hindi1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Baarish</p>
+                            <p class="color-grey">Arijit Singh</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">08</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-hindi2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Hosla</p>
+                            <p class="color-grey">Unknown</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">09</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-hindi3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Mehr</p>
+                            <p class="color-grey">Alexnder</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">10</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-hindi4.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Toofan</p>
+                            <p class="color-grey">A R Rehman</p>
+                        </div>
+                        <div class="heart">
+                           <a href="#"><i class=" color-white fa-solid fa-heart"></i></a> 
+                            
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">11</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Quasi</p>
+                            <p class="color-grey">Hemisphere</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">
+                            <p>12</p>
+                        </div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Snap</p>
+                            <p class="color-grey">Miranda</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">13</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">7 Fates</p>
+                            <p class="color-grey">BTS</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">14</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english4.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Adele 21</p>
+                            <p class="color-grey">Adele</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="queue-card">
+                        <div class=" color-white song-number">15</div>
+                        <div class="queue-card-img">
+                            <img src="./images/latest-english5.jpg" alt="">
+                        </div>
+                        <div class="queue-song-info">
+                            <p class="color-white">Boyfriend</p>
+                            <p class="color-grey">Justin Biber</p>
+                        </div>
+                        <div class="heart">
+                            <a href="#"><i class=" color-white fa-solid fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+
+    </div>
+</body>
+
+</html>

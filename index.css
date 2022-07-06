@@ -1,0 +1,737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: hsl(231deg 53% 10%);
+
+}
+
+.container {
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    background-color: hsl(231deg 53% 10%);
+}
+
+h3{
+    font-size: 22px;
+    padding: 5px 0 5px 0;
+}
+.color-white {
+    color: rgb(247, 248, 248);
+}
+
+.color-grey {
+    color: rgb(202 188 188);
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+/* NAV BAR */
+
+.nav-bar{
+    display: grid;
+    height: 100px;
+    align-items: center;
+    grid-template-columns: 100px 100px auto 346px 50px 80px;
+    color: rgb(247, 248, 248);
+    grid-gap: 2px;
+    background: transparent;
+    padding-top: 10px;
+    
+}
+.logo{
+    overflow: hidden;
+}
+.logo img{
+    height:75px;
+    width: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.name{
+    font-size: 25px;
+    padding-left: 5px;
+    overflow: hidden;
+}
+.name #last-name{
+    font-weight: bold;
+}
+.favourite{
+    padding-left: 83px;
+    font-size: 20px;
+    overflow:hidden
+}
+.favourite a{
+    text-decoration: none;
+    color: white;
+}
+.favourite a:hover{
+    color: rgb(140, 136, 136);
+    border-bottom : 2px solid rgb(140, 136, 136);
+}
+
+.search-box-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: hsl(230deg 55% 16%);
+    border-radius: 18px;
+    padding: 0 10px;
+    
+}
+.search-box-content i:hover{
+    color: rgb(140, 136, 136);
+}
+.search-box input{
+    width: 100%;
+    height: 43px;
+    font-size: 20px;
+    background:transparent;
+    border: none;
+    outline: none;
+    
+    color: white;
+    padding-left: 15px;
+}
+.bell-icon{
+    display: flex;
+    justify-content: center;
+}
+.bell-icon i:hover{
+    color: rgb(140, 136, 136);
+}
+ .profile-image img{
+    
+    width:70%;
+    border-radius: 50%;
+}
+.profile-image img:hover{
+    border : 2px solid rgb(140, 136, 136);
+    
+}
+
+/* main container */
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.main-container>.main {
+    height: auto;
+}
+
+.main-container>.queue-section {
+    height: auto;
+     margin-left: 13px;
+    padding-left: 7px;
+    border-left: 2px solid #674072;
+}
+
+/* New Releases */
+.new-releases {
+    width: 100%;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.new-releases div {
+    margin: 0 auto;
+}
+
+.cover-images {
+    width: 22vw;
+    height: 24vh;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.cover-images:hover {
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+
+
+/* Latest Releases */
+.latest-releases {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.latest-songs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.song-info {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    overflow: hidden;
+}
+
+.song-image{
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.resize-song-image {
+    height: 95px;
+    width: 90px;
+    border-radius: 15px;
+}
+
+.song-image:hover{
+    transform: scale(1.2);
+}
+
+.song-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.song-name p {
+    margin-bottom: 6px;
+}
+
+.add-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 20px;
+}
+
+.add-info p {
+    margin-bottom: 6px;
+}
+.add-info a{
+    text-decoration: none;
+}
+.three-dots{
+    font-weight: bolder;
+    color: white;
+    
+}
+/* additional info lightbox in latest releases section. It shows up when ... is clicked */
+
+#add-info-lightbox{
+    position: fixed;
+    height: 0;
+    width: 180px;
+    top: 0;
+    right: -5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.add-info-container div,
+.add-info-container div a h3
+{
+    background-color: rgb(186, 183, 183);
+    padding-bottom: 3px;
+    
+
+}
+.close{
+    text-decoration: none;
+}
+#add-info-lightbox:target{
+    
+    top: 50%;
+    left: 37%;
+    height: 110px;
+    width: 180px;
+    background-color: rgb(186, 183, 183);
+    border-radius: 4px;
+}
+
+/* now playing in bottom music player */
+#now-playing {
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    z-index: 5;
+}
+
+#now-playing:target {
+    height: 82px;
+    width: -webkit-fill-available;
+    top: 89%;
+    background-color: rgb(82, 79, 79);
+    
+}
+
+.left-cell {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    padding-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-cell-img {
+    height: 50px;
+    width: 50px;
+}
+
+.left-cell-img-resize {
+    height: 50px;
+    width: 50px;
+
+}
+
+.left-cell-info {
+    height: auto;
+    width: auto;
+    padding-left: 4px;
+    overflow: hidden;
+}
+
+.left-cell-info p {
+    margin-bottom: 3px;
+}
+
+.left-cell-like {
+    height: 86px;
+
+}
+
+.left-cell-like i {
+    height: 20px;
+    width: 20px;
+    padding-top: 24px;
+    padding-left: 14px;
+}
+
+.fa-heart:hover{
+    color: red;
+}
+
+.fa-ban:hover{
+    color: black;
+}
+
+.middle-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-cell audio{
+ width: 100%;   
+}
+
+.right-cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right-cell i {
+    height: 20px;
+    width: 20px;
+}
+
+.right-cell #close{
+    position: relative;
+    top: -29px;
+    right: -35px;
+    padding: 2px;
+    border-radius: 3px;
+}
+.right-cell #close:hover{
+        background-color: gray;
+}
+#close a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: large;
+}
+
+.controls i {
+    height: 20px;
+    width: 20px;
+}
+
+
+/* popular-artist-corousal */
+.popular-artists-corousal {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.popular-artists {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 21vh;
+    padding-top: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popular-artist-card p {
+    margin-top: 4px;
+}
+
+.popular-artists img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+}
+
+.popular-artists img:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* Music Station */
+.music-station{
+   width: 100%;
+   margin-bottom: 25px;
+    background-color:hsl(230deg 55% 16%) ;
+}
+
+.station-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.station{
+     margin: 8px;
+     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.station p{
+    position: absolute;
+    background: transparent;
+    z-index: 2;
+}
+
+.station img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.station img:hover{
+    transform: scale(1.3);
+}
+
+/* Occasion */
+
+.occasion{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 25px;
+}
+
+.occasion-card{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px 5px 8px;
+    overflow: hidden;
+}
+
+.occasion-card p{
+    position: absolute;
+    background: transparent;
+    z-index: 2;
+}
+
+.occasion-card img{
+    width: 300px;
+    height: 200px;
+    transition: all 0.4s;
+    border-radius: 3px;
+    
+}
+
+.occasion-card img:hover{
+    transform: scale(1.3);
+}
+
+/* Latest English and Hindi */
+
+.latest-card-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.latest-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.latest-card p{
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.latest-card img{
+    width: 130px;
+    height: 130px;
+   border-radius: 3px;
+}
+
+/* Sidebar Queue  */
+
+.queue-section a{
+    text-decoration: none;
+}
+
+.queue-heading{
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.queue-heading::after{              /* for adding chevron*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing:antialiased;
+    
+}
+
+.queue-card{
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr;
+    margin-bottom: 8px;
+}
+
+.queue-card div{
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.queue-card-img img{
+    height: 60px;
+    width: 60px;
+}
+.heart a i:hover{
+    color: red;
+}
+
+/* Queue Lightbox */
+
+#queue-lightbox{
+    position: fixed;
+    height: 0;
+    width: 180px;
+    top: 0;
+    right: -5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#queue-lightbox a{
+    background-color: #dedcdc;
+    padding: 1px 2px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+#queue-lightbox p{
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+#queue-lightbox p:hover{
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+#queue-lightbox:target{
+    top: 17%;
+    right: 7%;
+    height: 67px;
+    width: 180px;
+    background-color: rgb(186, 183, 183);
+    border-radius: 4px;
+}
+
+/* this section containes media quaries for entire page
+   they are arrange in the same order as they appear on the page */
+
+@media screen and (max-width: 992px) {
+    .nav-bar{
+        grid-template-columns: 0px 0px 0px auto 50px 80px;
+        
+    }
+    h3{
+        text-align: center;
+    }
+    .new-releases {
+        grid-template-columns: 1fr;
+    }
+    
+
+    .cover-images {
+        width: 88vw;
+        height: 40vh;
+        margin-bottom: 12px;
+    }
+
+    .queue{
+        width: 0%;
+    }
+
+    .main-container{
+        width: 100%;
+    }
+
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+
+     .music-station{
+        margin-top: 137px;
+    }
+
+    .station-container {
+         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .popular-artists {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .occasion{
+        grid-template-columns: 1fr;
+    }
+
+    .occasion-card img{
+        width: 81vw;
+        height: 30vh;
+    }
+
+    .occasion-card{
+        margin-bottom: 5px;
+    }
+
+    .occasion-card p{
+        font-size: 28px;
+    }
+
+    .latest-card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .latest-card{
+        align-items: center;
+    }
+}
+
+/* media quaries for small devices */
+@media screen and (max-width: 600px) {
+    .nav-bar{
+        grid-template-columns: 0px 0px 0px auto 50px 80px;
+        overflow: hidden;
+    }
+
+    .new-releases {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-images {
+        width: 88vw;
+        height: 29vh;
+        margin-bottom: 12px;
+    }
+
+    .music-station{
+        margin-top: 340px;
+    }
+
+    .station-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .station{
+        margin-bottom: 5px;
+    }
+
+    .popular-artists {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular-artist-card{
+        margin-bottom: 5px;
+    }
+
+    .latest-songs {
+        grid-template-columns: 1fr;
+    }
+
+    .occasion-card img{
+        width: 85vw;
+        height: 27vh;
+    }
+
+    .occasion-card{
+        margin-bottom: 5px;
+    }
+
+    .latest-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .latest-card{
+        align-items: center;
+    }
+    
+}
+
